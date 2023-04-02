@@ -3,7 +3,7 @@
 import game from '../index.js';
 import { getRandomNumber } from '../src/cli.js';
 
-const ruleMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
+const ruleMessage = 'What is the result of the expression?';
 const getQuestion = () => {
 	const signs = ['+', '-', '*'];
 	const num1 = getRandomNumber();

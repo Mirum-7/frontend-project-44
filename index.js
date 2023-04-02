@@ -9,12 +9,12 @@ const game = (gameRuleMessage, getQuestion, getResult) => {
 	console.log(greeting(name));
 	console.log(gameRuleMessage);
 
-	let score = 0;
+	let round = 1;
 	let gameIsWin = true;
 	let userAnswer;
 	let correctAnswer;
 
-	while (score < numberOfRounds) {
+	while (round <= numberOfRounds) {
 		const question = getQuestion();
 		correctAnswer = getResult(question).toString();
 
@@ -26,7 +26,7 @@ const game = (gameRuleMessage, getQuestion, getResult) => {
 			break;
 		}
 
-		score += 1;
+		round += 1;
 		console.log('Correct!');
 	}
 
