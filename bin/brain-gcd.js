@@ -3,7 +3,7 @@
 import game from '../index.js';
 import { getGcd, getRandomNumber } from '../src/cli.js';
 
-const ruleMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
+const ruleMessage = 'Find the greatest common divisor of given numbers.';
 const getQuestion = () => `${getRandomNumber(1)} ${getRandomNumber(1)}`;
 const getResult = (question) => getGcd(...question.split(' ').map((el) => +el));
 

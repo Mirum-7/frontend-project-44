@@ -6,7 +6,10 @@ export const greeting = (name) => `Hello, ${name}!`;
 
 export const getAnswer = (msg) => readlineSync.question(`${msg} `);
 
-export const getRandomNumber = (start = 0, end = 100) => Math.floor(Math.random() * (end - start + 1) + start);
+export const getRandomNumber = (
+	start = 0,
+	end = 100,
+) => Math.floor(Math.random() * (end - start + 1) + start);
 
 export const isEven = (number) => number % 2 === 0;
 
@@ -38,3 +41,16 @@ export const getGcd = (num1, num2) => {
 
 	return maxDivisor;
 };
+
+export const createProgression = (first, len, step) => {
+	const result = [];
+
+	for (let i = 0; i < len; i += 1) {
+		result.push(first);
+		first += step;
+	}
+
+	return result;
+};
+
+export const getAverage = (...nums) => nums.reduce((sum, el) => sum += el, 0) / nums.length;
