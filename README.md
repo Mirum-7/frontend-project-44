@@ -1,4 +1,12 @@
 ### Hexlet tests and linter status:
 [![Maintainability](https://api.codeclimate.com/v1/badges/acdf7a8372a0799f8d99/maintainability)](https://codeclimate.com/github/Mirum-7/frontend-project-44/maintainability)
 
-https://asciinema.org/a/P1Mh1spVGxiVWM1nV625wrC9T
+#Installation 
+
+1. ```got clone git@github.com:Mirum-7/frontend-project-44.git```
+2. ```make publish```
+3. ```npm link```
+
+#Use
+
+video: https://asciinema.org/a/P1Mh1spVGxiVWM1nV625wrC9T

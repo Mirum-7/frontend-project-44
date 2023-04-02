@@ -55,6 +55,8 @@ export const createProgression = (first, len, step) => {
   return result;
 };
 
+// Я хотел сделать так "(...nums) => nums.reduce((sum, el) => sum + el, 0) / nums.length",
+// но линтер запретил
 export const getAverage = (num1, num2) => (num1 + num2) / 2;
 
 export const isPrime = (number) => {
