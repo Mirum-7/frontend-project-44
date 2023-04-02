@@ -55,8 +55,9 @@ export const createProgression = (first, len, step) => {
   return result;
 };
 
-export const getAverage = (...nums) =>
-  nums.reduce((sum, el) => sum + el, 0) / nums.length;
+export const getAverage = (
+  ...nums
+) => nums.reduce((sum, el) => sum + el, 0) / nums.length;
 
 export const isPrime = (number) => {
   let is = true;
