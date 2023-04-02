@@ -10,7 +10,8 @@ need install node:
 
 1. ```got clone git@github.com:Mirum-7/frontend-project-44.git```
 2. ```make publish```
-3. ```npm link```
+3. ```npm install```
+4. ```npm link```
 
 # Use
 
