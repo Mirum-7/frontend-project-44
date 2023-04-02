@@ -45,25 +45,27 @@ export const getGcd = (num1, num2) => {
 export const createProgression = (first, len, step) => {
 	const result = [];
 
+	let next = first;
+
 	for (let i = 0; i < len; i += 1) {
-		result.push(first);
-		first += step;
+		result.push(next);
+		next += step;
 	}
 
 	return result;
 };
 
-export const getAverage = (...nums) => nums.reduce((sum, el) => sum += el, 0) / nums.length;
+export const getAverage = (...nums) => nums.reduce((sum, el) => sum + el, 0) / nums.length;
 
 export const isPrime = (number) => {
-	let isPrime = true;
+	let is = true;
 
-	for (let i = 2; i < number; i++) {
+	for (let i = 2; i < number; i += 1) {
 		if (number % i === 0) {
-			isPrime = false;
+			is = false;
 			break;
 		}
 	}
 
-	return isPrime;
+	return is;
 };
