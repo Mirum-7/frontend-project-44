@@ -16,14 +16,14 @@ const getQuestion = () => {
 // const getResult = (question) => eval(question).toString(); // Линтер жалуется на функцию eval
 
 const getResult = (question) => { // Вот второй вариант
-	if (question.includes('+')){
-		const [num1, num2] = question.split('+')
+	if (question.includes('+')) {
+		const [num1, num2] = question.split('+');
 		return +num1 + +num2;
-	} else if (question.includes('-')) {
-		const [num1, num2] = question.split('-')
+	} if (question.includes('-')) {
+		const [num1, num2] = question.split('-');
 		return +num1 - +num2;
 	}
-	const [num1, num2] = question.split('*')
+	const [num1, num2] = question.split('*');
 	return +num1 * +num2;
 };
 

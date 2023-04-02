@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import game from '../index.js';
-import {getGcd, getRandomNumber} from "../src/cli.js";
+import { getGcd, getRandomNumber } from '../src/cli.js';
 
 const ruleMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getQuestion = () => `${getRandomNumber(1)} ${getRandomNumber(1)}`;

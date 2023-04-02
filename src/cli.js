@@ -25,18 +25,16 @@ export const getGcd = (num1, num2) => {
 
 	let maxDivisor = 0;
 
-	for(let i = 1; i<= Math.sqrt(minNum) + 1; i++){
+	for (let i = 1; i <= Math.sqrt(minNum) + 1; i += 1) {
 		if (minNum % i === 0) {
-			const oppositeDivisor = minNum / i
+			const oppositeDivisor = minNum / i;
 			if (maxNum % oppositeDivisor === 0 && oppositeDivisor > maxDivisor) {
-				maxDivisor = oppositeDivisor
-				continue
-			}
-			if (maxNum % i === 0 && i > maxDivisor){
+				maxDivisor = oppositeDivisor;
+			} else if (maxNum % i === 0 && i > maxDivisor) {
 				maxDivisor = i;
 			}
 		}
 	}
 
-	return maxDivisor
+	return maxDivisor;
 };
