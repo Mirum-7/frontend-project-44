@@ -1,4 +1,4 @@
-import { getAnswer, getName, greeting } from './src/cli.js';
+import { getAnswer, getName } from './src/cli.js';
 
 const game = (gameRuleMessage, getQuestion, getResult) => {
   console.log('Welcome to the Brain Games!');
@@ -6,7 +6,7 @@ const game = (gameRuleMessage, getQuestion, getResult) => {
   const numberOfRounds = 3;
   const name = getName();
 
-  console.log(greeting(name));
+  console.log(`Hello, ${name}!`);
   console.log(gameRuleMessage);
 
   let round = 1;

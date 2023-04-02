@@ -17,7 +17,7 @@ const getQuestion = () => {
   return progression.join(' ');
 };
 
-const getResult = (question) => {
+const getResult = (question) => { // question be like: "1 3 5 .. 7 9"
   const progression = question.split(' ');
   const unknownElementIndex = progression.indexOf('..');
   if (unknownElementIndex === 0) {
