@@ -57,8 +57,8 @@ export const getAverage = (num1, num2) => (num1 + num2) / 2;
 
 export const isPrime = (number) => {
   let is = true;
-  if(number <= 1) {
-    return false
+  if (number <= 1) {
+    return false;
   }
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
