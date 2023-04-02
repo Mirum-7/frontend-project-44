@@ -5,7 +5,7 @@
 
 # Installation 
 
-need install _ node _
+need install node:
 ```brew install node```
 
 1. ```got clone git@github.com:Mirum-7/frontend-project-44.git```
