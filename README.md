@@ -9,8 +9,8 @@ need install node:
 ```brew install node```
 
 1. ```got clone git@github.com:Mirum-7/frontend-project-44.git```
-2. ```make publish```
-3. ```npm install```
+2. ```npm install```
+3. ```make publish```
 4. ```npm link```
 
 # Use
