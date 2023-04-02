@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {
-	getRandomNumber, booleanToWord, isPrime,
+  getRandomNumber, booleanToWord, isPrime,
 } from '../src/cli.js';
 import game from '../index.js';
 
