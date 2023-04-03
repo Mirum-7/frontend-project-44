@@ -1,4 +1,4 @@
-import { getAnswer, getName } from './src/cli.js';
+import { getAnswer, getName } from './cli.js';
 
 const game = (gameRuleMessage, getQuestion, getResult) => {
   console.log('Welcome to the Brain Games!');
@@ -9,12 +9,10 @@ const game = (gameRuleMessage, getQuestion, getResult) => {
   console.log(`Hello, ${name}!`);
   console.log(gameRuleMessage);
 
-  let round = 1;
   let gameIsWin = true;
   let userAnswer;
   let correctAnswer;
-
-  while (round <= numberOfRounds) {
+  for (let round = 1; round <= numberOfRounds; round += 1) {
     const question = getQuestion();
     correctAnswer = getResult(question).toString();
 
@@ -26,7 +24,6 @@ const game = (gameRuleMessage, getQuestion, getResult) => {
       break;
     }
 
-    round += 1;
     console.log('Correct!');
   }
 
