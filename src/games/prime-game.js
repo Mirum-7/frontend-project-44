@@ -1,13 +1,21 @@
 import {
-  getRandomNumber, booleanToWord, isPrime,
-} from '../cli.js';
-import game from '../index.js';
+  booleanToWord,
+  getRandomNumber,
+  isPrime,
+} from '../funcs.js';
+import startGame from '../index.js';
 
-const brainPrimeStart = () => {
+const startBrainPrime = () => {
   const ruleMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const getResult = (question) => booleanToWord(isPrime(question));
 
-  game(ruleMessage, getRandomNumber, getResult);
+  const getQuestionAndResult = () => {
+    const question = getRandomNumber();
+    const result = booleanToWord(isPrime(question));
+
+    return [question, result];
+  };
+
+  startGame(ruleMessage, getQuestionAndResult);
 };
 
-export default brainPrimeStart;
+export default startBrainPrime;

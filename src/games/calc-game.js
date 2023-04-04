@@ -1,38 +1,34 @@
-import game from '../index.js';
-import { getRandomNumber } from '../cli.js';
+import startGame from '../index.js';
+import { getRandomNumber } from '../funcs.js';
 
-const brainCalcStart = () => {
+const startBrainCalc = () => {
   const ruleMessage = 'What is the result of the expression?';
-  const getQuestion = () => {
+
+  const getQuestionAndResult = () => {
     const signs = ['+', '-', '*'];
     const num1 = getRandomNumber();
     const num2 = getRandomNumber();
     const signIndex = getRandomNumber(0, 2);
     const sign = signs[signIndex];
 
-    return `${num1} ${sign} ${num2}`;
-  };
+    const question = `${num1} ${sign} ${num2}`;
 
-  const getResult = (question) => {
-    const elementsOfMathExpression = question.split(' ');
-    const [num1, sigh, num2] = elementsOfMathExpression;
     let result;
-    switch (sigh) {
-      case '+':
-        // return +num1 + +num2; линт поругался на это
-        result = +num1 + +num2; // пришлось создавать новую переменную
+    switch (signIndex) {
+      case 0:
+        result = +num1 + +num2;
         break;
-      case '-':
+      case 1:
         result = +num1 - +num2;
         break;
       default:
         result = +num1 * +num2;
         break;
     }
-    return result;
+    return [question, result.toString()];
   };
 
-  game(ruleMessage, getQuestion, getResult);
+  startGame(ruleMessage, getQuestionAndResult);
 };
 
-export default brainCalcStart;
+export default startBrainCalc;
