@@ -1,17 +1,18 @@
 import {
-  getRandomNumber, isEven, booleanToWord,
+  getRandomNumber, booleanToWord,
 } from '../funcs.js';
 import startGame from '../index.js';
 
+const isEven = (number) => number % 2 === 0;
+
+const ruleMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
+const getQuestionAndResult = () => {
+  const question = getRandomNumber();
+
+  return [question, booleanToWord(isEven(question))];
+};
+
 const startBrainEven = () => {
-  const ruleMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-  const getQuestionAndResult = () => {
-    const question = getRandomNumber();
-
-    return [question, booleanToWord(isEven(question))];
-  };
-
   startGame(ruleMessage, getQuestionAndResult);
 };
 

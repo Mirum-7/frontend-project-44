@@ -1,6 +1,6 @@
 import { getAnswer } from './funcs.js';
 
-function startGame(gameRuleMessage, getQuestionAndResult) {
+const startGame = (gameRuleMessage, getQuestionAndResult) => {
   console.log('Welcome to the Brain Games!');
 
   const numberOfRounds = 3;
@@ -24,6 +24,6 @@ function startGame(gameRuleMessage, getQuestionAndResult) {
     console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
-}
+};
 
 export default startGame;
