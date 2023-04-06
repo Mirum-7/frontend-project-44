@@ -11,7 +11,7 @@ Accept the challenge and test your mind in a new game! The game has several mini
 need install node:
 ```brew install node```
 
-1. ```got clone git@github.com:Mirum-7/frontend-project-44.git```
+1. ```git clone git@github.com:Mirum-7/frontend-project-44.git```
 2. ```npm install```
 3. ```make publish```
 4. ```npm link```
